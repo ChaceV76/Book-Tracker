@@ -1,0 +1,92 @@
+/* inria-serif-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inria Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/inria-serif-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inria-serif-bold-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inria Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/inria-serif-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* Fonts */
+:root {
+    --fs-16: calc(16/ 16 * 1rem); /* Convert to rems */
+    --fs-48: calc(48/ 16 * 1rem);
+
+    --font-size-main: var(--fs-16);
+    --font-size-header: var(--fs-48);
+}
+
+/* Colors */
+:root {
+    /*initalizes the color */
+    --c-sagegreen: hsl(82, 20%, 62%); 
+    --c-white: hsl(0, 0%, 100%);
+    --c-black: hsl(0, 0%, 0%);
+
+    /* Defines the roles of the color */
+    --color-main-bg: var(--c-sagegreen);
+    --color-secondary-bg: var(--c-white);
+    --color-text-dark: var(--c-black);
+
+}
+
+/* Controls how the content inside this class behaves*/
+.wrapper {
+    width: min(calc(100% - 48px), calc(1200 / 16 * 1rem));
+    margin-inline: auto;   
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+* {
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Inria Serif', Arial, Helvetica, sans-serif;
+    background-color: var(--color-main-bg);
+
+}
+
+
+header {
+    background-color: var(--color-secondary-bg);
+}
+
+header .wrapper { 
+    padding: 1.5rem 2rem;
+}
+
+
+main {
+    font-size: var(--font-size-main);
+    padding: 2rem;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
